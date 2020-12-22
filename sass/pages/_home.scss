@@ -1,5 +1,174 @@
-.restaurants-element__picture{
-    width: 90%;
-    height: 400px;
-    object-fit: cover;
+body{
+    margin: 0;
+    padding: 0;
 }
+
+.header{
+    padding: 0;
+    &-form{
+        width: 100%;
+        background-color: darken($background-color, $amount: 8%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        color: rgb(46, 45, 45);
+        padding: 0;
+        box-shadow: 0px 5px 7px darken($background-color, 20%) inset;
+        margin-bottom: 0;
+        
+        &__input{
+            background-color: darken($background-color, 8%);
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 3.5rem;
+            width: 40%;
+            color: rgb(46, 45, 45);
+            font-weight: bold;
+        }
+        &__icon{
+            padding: 0 0.1rem;
+            margin: 0;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+    }
+    &-presentation{
+    background-color: $background-color;
+    margin: 0;
+    overflow: auto;
+        &__title{
+        margin: auto;
+        padding: 0 15rem;
+        text-align: center;
+        margin-top: 8rem;
+        }
+        &__subtitle{
+        padding: 0;
+        margin: 3rem auto;
+        text-align: center;
+        color: darken($background-color, 50%);
+        font-size: 2rem;
+        }
+        &__button{
+        width: 55%;
+        margin: 8rem auto 10rem;
+        }
+    }
+}
+
+.tutorial{
+    @include box-sizing;
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+    &-stages{
+        width: 97%;
+        margin-left: 3%;
+        &__element{
+            background-color: $background-color;
+            border-radius: 4rem;
+            padding: 7rem 0;
+            @include shadow-box;
+            margin-top: 5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+            &:nth-child(3){
+                background-color: lighten($color-tertiary, 20);
+            }
+        }
+    }
+    &-element__number{
+        border-radius: 5rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+        background-color: $color-primary;
+        color: white;
+        position: absolute;
+        left: -2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-element__icon{
+        color: rgb(116, 116, 116);
+        position: absolute;
+        left: 11%;
+    }
+    &-element__title{
+        font-weight: bold;
+        position: absolute;
+        left: 25%;   
+    }
+}
+.fa-mobile-alt{
+    font-size: 4rem;
+}
+.fa-store{
+    color: $color-primary;
+}
+
+.restaurants{
+    background-color: $background-color;
+    padding: 12rem 0;
+    &-title{
+        @include box-sizing;
+        margin-bottom: 4rem;
+    }
+    &-element{
+        background-color: white;
+        border-radius: 3rem;
+        position: relative;
+        margin-bottom: 4rem;
+        height: 52rem;
+        &__picture{
+            width: 100%;
+            height: 72%;
+            object-fit: cover;
+            border-radius: 3rem 3rem 0 0;
+        }
+        &__new{
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            background-color: $color-tertiary;
+            font-size: 3rem;
+            padding: 1.5rem 2rem;
+            color: darken($color-tertiary, 35);
+            font-weight: bold;
+            border-radius: 0.5rem;
+        }
+        &__description{
+            position: relative;
+            padding: 0 0 1.5rem 2.5rem;
+            &__like{
+                position: absolute;
+                right: 7%;
+                top: 10%;
+                &--full{
+                    position: absolute;
+                    right: 7%;
+                    top: 10%;
+                }
+            }
+            &__name{
+                font-weight: bold;
+                font-size: 3.5rem;
+                line-height: 1.2rem;
+            }
+            &__localisation{
+                color: rgb(73, 73, 73);
+                line-height: 1.2rem;
+                font-size: 3.5rem;
+            }
+        }
+    } 
+}
+
+
+
+

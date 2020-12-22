@@ -1,0 +1,8 @@
+@mixin shadow-box {
+    box-shadow: 0.1rem 0.1rem 2rem $color-shadow;
+}
+
+@mixin box-sizing {
+    width: 90%;
+    margin: auto;
+}

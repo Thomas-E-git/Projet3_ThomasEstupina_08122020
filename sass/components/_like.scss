@@ -1,0 +1,38 @@
+.restaurants-element__description__like{
+    font-size: $like-size;
+    cursor: pointer;
+    padding: 0.1rem;
+    z-index: 1;
+    &:hover {
+        & +.restaurants-element__description__like--full{
+        animation: full-like 750ms both;
+        }
+        background: linear-gradient(to top right, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &--full{
+        font-size: $like-size;
+        background: linear-gradient(to top right, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(0);
+        padding: 0.1rem;
+    }
+}
+
+@keyframes full-like{
+    0%{
+        transform: scale(0);
+        opacity: 0.2;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

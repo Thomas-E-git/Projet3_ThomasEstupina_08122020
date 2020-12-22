@@ -1,0 +1,133 @@
+.menu-header{
+    a{
+        text-decoration: none;
+        color: rgb(54, 54, 54);
+    }
+}
+
+.menu-picture{
+    position: relative;
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 57rem;
+    }
+}
+
+.menu{
+    background-color: $background-color;
+    top: -1rem;
+    border-radius: 8rem 8rem 0 0;
+    position: relative;
+    top: -10rem;
+    padding-bottom: 15rem;
+    margin-bottom: -10rem;
+    &-heading{
+        &__title{
+            padding-top: 8rem;
+            @include box-sizing;
+        }
+        &__like{
+            position: absolute;
+            top: 8rem;
+            right: 5%;
+            &--full{
+                position: absolute;
+                top: 8rem;
+                right: 5%;  
+            }
+        }
+    }
+    &-section{
+        @include box-sizing;
+        margin-top: 6rem;
+        margin-bottom: 8rem;
+        &_heading{
+            color: rgb(109, 109, 109);
+            font-size: 2.88rem;
+            margin-bottom: 1rem;
+        }
+        &_line{
+            background-color: $color-tertiary;
+            height: 0.5rem;
+            width: 12%;
+        }
+        &_item{
+            border-radius: 3rem;
+            background-color: white;
+            padding: 0 2rem;
+            position: relative;
+            margin-top: 3rem;
+            word-wrap: break-word;
+            overflow: hidden;
+            font-size: 3rem;
+            display: flex;
+            &:hover{
+                cursor: pointer;
+                .check{
+                    transform: scaleX(1);
+                }
+                .menu-section_item_meal_price{
+                    transform: translateX(-350%)
+                }
+                .menu-section_item_meal{
+                    width: 60%;
+                }
+            }
+            &_meal_name{
+                font-weight: 700;
+                font-size: 3.5rem;
+                margin-bottom: 0;
+            }
+            &_meal_details{
+                color: rgb(88, 88, 88);
+                margin-top: 1rem;         
+            }
+            &_meal_price{
+                position: absolute;
+                bottom: 0;
+                right: 3rem;
+                transform-origin: right;
+                font-weight: bold;
+                color: rgb(61, 61, 61);
+            }
+            p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    &-submit{
+        width: 50%;
+        margin: auto;
+        margin-top: 10rem;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.check{
+    font-size: 5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    right: 0%;
+    transition: all 200ms ease;
+    transform: scaleX(0);
+    background-color: $color-tertiary;
+    height: 100%;
+    width: 20%;
+    border-radius: 0 3rem 3rem 0;
+    transform-origin: right;
+}
+
+.footer{
+    margin-top: 0;
+}
