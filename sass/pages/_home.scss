@@ -1,10 +1,21 @@
 body{
     margin: 0;
     padding: 0;
+    @include desktop{
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .header{
     padding: 0;
+    @include desktop{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     &-form{
         width: 100%;
         background-color: darken($background-color, $amount: 8%);
@@ -16,7 +27,11 @@ body{
         padding: 0;
         box-shadow: 0px 5px 7px darken($background-color, 20%) inset;
         margin-bottom: 0;
-        
+        @include desktop{
+            width: 60%;
+            background-color: white;
+            box-shadow: none;
+        }
         &__input{
             background-color: darken($background-color, 8%);
             border: none;
@@ -27,6 +42,13 @@ body{
             width: 40%;
             color: rgb(46, 45, 45);
             font-weight: bold;
+            @include desktop{
+                background-color: white;
+                width: 70%;
+                margin: 2rem;
+                text-align: left;
+                padding: 1.5rem;
+            }
         }
         &__icon{
             padding: 0 0.1rem;
@@ -36,25 +58,34 @@ body{
         }
     }
     &-presentation{
-    background-color: $background-color;
-    margin: 0;
-    overflow: auto;
+        background-color: $background-color;
+        margin: 0;
+        overflow: auto;
+        @include desktop{
+            width: 100%;
+        }
         &__title{
-        margin: auto;
-        padding: 0 15rem;
-        text-align: center;
-        margin-top: 8rem;
+            margin: auto;
+            padding: 0 15rem;
+            text-align: center;
+            margin-top: 8rem;
         }
         &__subtitle{
-        padding: 0;
-        margin: 3rem auto;
-        text-align: center;
-        color: darken($background-color, 50%);
-        font-size: 2rem;
+            padding: 0;
+            margin: 3rem auto;
+            text-align: center;
+            color: darken($background-color, 50%);
+            font-size: 2rem;
+            @include desktop{
+            font-size: 2.5rem;
+            }
         }
         &__button{
         width: 55%;
         margin: 8rem auto 10rem;
+        @include desktop{
+            width: 40%;
+            }
         }
     }
 }
@@ -63,9 +94,20 @@ body{
     @include box-sizing;
     margin-top: 10rem;
     margin-bottom: 12rem;
+    @include tablet{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     &-stages{
         width: 97%;
         margin-left: 3%;
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+        }
         &__element{
             background-color: $background-color;
             border-radius: 4rem;
@@ -76,6 +118,9 @@ body{
             display: flex;
             align-items: center;
             font-size: 3rem;
+            @include desktop{
+                width: 30%;
+            }
             &:nth-child(3){
                 background-color: lighten($color-tertiary, 20);
             }
@@ -118,6 +163,18 @@ body{
     &-title{
         @include box-sizing;
         margin-bottom: 4rem;
+        @include tablet{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &-list{
+        @include desktop{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
     }
     &-element{
         background-color: white;
@@ -125,6 +182,15 @@ body{
         position: relative;
         margin-bottom: 4rem;
         height: 52rem;
+        @include tablet{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include desktop{
+            width: 40%;
+            margin: 5rem auto;
+        }
         &__picture{
             width: 100%;
             height: 72%;

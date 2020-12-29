@@ -1,3 +1,4 @@
+
 .menu-header{
     a{
         text-decoration: none;
@@ -22,6 +23,16 @@
     top: -10rem;
     padding-bottom: 15rem;
     margin-bottom: -10rem;
+    @include tablet{
+        width: 90% ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop{
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
     &-heading{
         &__title{
             padding-top: 8rem;
@@ -42,15 +53,39 @@
         @include box-sizing;
         margin-top: 6rem;
         margin-bottom: 8rem;
+        overflow: hidden;
         &_heading{
             color: rgb(109, 109, 109);
             font-size: 2.88rem;
             margin-bottom: 1rem;
+            animation: anim-heading $anim-heading-duration both ease-in-out;
+            transform-origin: right;
+            @include desktop{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 4rem;
+            }
+            @for $i from 0 to 3 {
+                &--#{$i} {
+                    animation-delay: $anim-heading-delay * $i;
+                }
+            }
         }
         &_line{
             background-color: $color-tertiary;
             height: 0.5rem;
-            width: 12%;
+            animation: anim-line $anim-heading-duration both ease-in-out;
+            @include desktop{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @for $i from 0 to 3 {
+                &--#{$i} {
+                    animation-delay: $anim-heading-delay * $i;
+                }
+            }
         }
         &_item{
             border-radius: 3rem;
@@ -62,10 +97,26 @@
             overflow: hidden;
             font-size: 3rem;
             display: flex;
+            animation: anim-section $anim-item-duration backwards;
+            transform-origin: left;
+            @include desktop{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @for $i from 1 through 10 {
+                &--#{$i} {
+                    animation-delay: $anim-item-delay * $i ;
+                }
+            }
+
             &:hover{
                 cursor: pointer;
                 .check{
-                    transform: scaleX(1);
+                    transform: translateX(0);
+                }
+                .fa-check-circle{
+                    transform: rotate(-360deg);
                 }
                 .menu-section_item_meal_price{
                     transform: translateX(-350%)
@@ -88,6 +139,7 @@
                 bottom: 0;
                 right: 3rem;
                 transform-origin: right;
+                transition: transform 400ms;
                 font-weight: bold;
                 color: rgb(61, 61, 61);
             }
@@ -119,13 +171,53 @@
     bottom: 0%;
     top: 0%;
     right: 0%;
-    transition: all 200ms ease;
-    transform: scaleX(0);
+    transition: all 500ms ease;
+    transform: translateX(100%);
     background-color: $color-tertiary;
     height: 100%;
     width: 20%;
     border-radius: 0 3rem 3rem 0;
     transform-origin: right;
+}
+
+.fa-check-circle{
+    transition: transform 500ms;
+}
+
+@keyframes anim-section{
+    from{
+        transform: translateX(-120%);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes anim-heading{
+    from{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-line{
+    0%{
+        width: 12%;
+        opacity: 0;
+    }
+    50%{
+        width: 100%;
+        opacity: 1;
+    }
+    100%{
+        width: 12%;
+    }
 }
 
 .footer{

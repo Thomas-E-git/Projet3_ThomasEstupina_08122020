@@ -1,5 +1,11 @@
 html{
     font-size: 80%;
+    @include tablet{
+        font-size: 55% ;
+    }
+    @include desktop{
+        font-size: 45% ;
+    }
 }
 
 body{
