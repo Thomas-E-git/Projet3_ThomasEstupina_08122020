@@ -9,12 +9,12 @@
 
 @mixin tablet {
     @media screen and (min-device-width: map-get($breakpoints ,min-tablet)) and (max-device-width: map-get($breakpoints ,max-tablet)) {
-        @content
+        @content;
     }
 }
 
 @mixin desktop {
     @media screen and (min-width: map-get($breakpoints ,desktop)) {
-        @content
+        @content;
     }
 }
