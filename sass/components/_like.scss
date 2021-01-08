@@ -10,7 +10,6 @@
         background: linear-gradient(to top right, $color-secondary, $color-primary);
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &--full{
@@ -18,7 +17,6 @@
         background: linear-gradient(to top right, $color-secondary, $color-primary);
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-clip: text;
         -webkit-text-fill-color: transparent;
         transform: scale(0);
         padding: 0.1rem;

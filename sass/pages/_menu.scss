@@ -11,7 +11,7 @@
     img{
         width: 100%;
         object-fit: cover;
-        height: 57rem;
+        height: 46rem;
     }
 }
 
@@ -35,17 +35,18 @@
     }
     &-heading{
         &__title{
-            padding-top: 8rem;
+            padding-top: 6rem;
             @include box-sizing;
+            font-size: 5rem;
         }
         &__like{
             position: absolute;
-            top: 8rem;
-            right: 5%;
+            top: 6rem;
+            right: 9%;
             &--full{
                 position: absolute;
-                top: 8rem;
-                right: 5%;  
+                top: 6rem;
+                right: 9%;  
             }
         }
     }
@@ -56,7 +57,7 @@
         overflow: hidden;
         &_heading{
             color: rgb(109, 109, 109);
-            font-size: 2.88rem;
+            font-size: 2.7rem;
             margin-bottom: 1rem;
             animation: anim-heading $anim-heading-duration both ease-in-out;
             transform-origin: right;
@@ -95,7 +96,7 @@
             margin-top: 3rem;
             word-wrap: break-word;
             overflow: hidden;
-            font-size: 3rem;
+            font-size: 2.5rem;
             display: flex;
             animation: anim-section $anim-item-duration backwards;
             transform-origin: left;
@@ -119,7 +120,8 @@
                     transform: rotate(-360deg);
                 }
                 .menu-section_item_meal_price{
-                    transform: translateX(-350%)
+                    transform: translateX(-12rem)
+
                 }
                 .menu-section_item_meal{
                     width: 60%;
@@ -127,12 +129,14 @@
             }
             &_meal_name{
                 font-weight: 700;
-                font-size: 3.5rem;
-                margin-bottom: 0;
+                font-size: 2.8rem;
+                margin-bottom: 0.5rem;
+                margin-top: 1.5rem;
             }
             &_meal_details{
                 color: rgb(88, 88, 88);
-                margin-top: 1rem;         
+                margin-top: 0.6rem;
+                      
             }
             &_meal_price{
                 position: absolute;
@@ -148,10 +152,13 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+            &_meal{
+                width: 85%;
+            }
         }
     }
     &-submit{
-        width: 50%;
+        width: 55%;
         margin: auto;
         margin-top: 10rem;
         a{
@@ -162,7 +169,7 @@
 }
 
 .check{
-    font-size: 5rem;
+    font-size: 4rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -175,7 +182,7 @@
     transform: translateX(100%);
     background-color: $color-tertiary;
     height: 100%;
-    width: 20%;
+    width: 12rem;
     border-radius: 0 3rem 3rem 0;
     transform-origin: right;
 }

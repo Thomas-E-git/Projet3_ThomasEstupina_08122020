@@ -3,12 +3,12 @@
 }
 
 @mixin box-sizing {
-    width: 90%;
+    width: 92%;
     margin: auto;
 }
 
 @mixin tablet {
-    @media screen and (min-device-width: map-get($breakpoints ,min-tablet)) and (max-device-width: map-get($breakpoints ,max-tablet)) {
+    @media screen and (min-width: map-get($breakpoints ,min-tablet)) and (max-width: map-get($breakpoints ,max-tablet)) {
         @content;
     }
 }

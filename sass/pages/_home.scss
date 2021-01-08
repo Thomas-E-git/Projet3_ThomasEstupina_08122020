@@ -38,8 +38,8 @@ body{
             margin: 0;
             padding: 0;
             text-align: center;
-            font-size: 3.5rem;
-            width: 40%;
+            font-size: 3rem;
+            width: 50%;
             color: rgb(46, 45, 45);
             font-weight: bold;
             @include desktop{
@@ -51,9 +51,8 @@ body{
             }
         }
         &__icon{
-            padding: 0 0.1rem;
             margin: 0;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
         }
     }
@@ -66,7 +65,7 @@ body{
         }
         &__title{
             margin: auto;
-            padding: 0 15rem;
+            padding: 0 10rem;
             text-align: center;
             margin-top: 8rem;
         }
@@ -75,13 +74,13 @@ body{
             margin: 3rem auto;
             text-align: center;
             color: darken($background-color, 50%);
-            font-size: 2rem;
+            font-size: 3rem;
             @include desktop{
             font-size: 2.5rem;
             }
         }
         &__button{
-        width: 55%;
+        width: 70%;
         margin: 8rem auto 10rem;
         @include desktop{
             width: 40%;
@@ -111,7 +110,7 @@ body{
         &__element{
             background-color: $background-color;
             border-radius: 4rem;
-            padding: 7rem 0;
+            padding: 6rem 0;
             @include shadow-box;
             margin-top: 5rem;
             position: relative;
@@ -159,7 +158,7 @@ body{
 
 .restaurants{
     background-color: $background-color;
-    padding: 12rem 0;
+    padding: 10rem 0;
     &-title{
         @include box-sizing;
         margin-bottom: 4rem;
@@ -180,8 +179,11 @@ body{
         background-color: white;
         border-radius: 3rem;
         position: relative;
-        margin-bottom: 4rem;
-        height: 52rem;
+        margin-bottom: 3rem;
+        height: 40rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         @include tablet{
             width: 80%;
             margin-left: auto;
@@ -202,8 +204,8 @@ body{
             top: 4%;
             right: 4%;
             background-color: $color-tertiary;
-            font-size: 3rem;
-            padding: 1.5rem 2rem;
+            font-size: 2rem;
+            padding: 1rem 1.5rem;
             color: darken($color-tertiary, 35);
             font-weight: bold;
             border-radius: 0.5rem;
@@ -223,13 +225,13 @@ body{
             }
             &__name{
                 font-weight: bold;
-                font-size: 3.5rem;
+                font-size: 3rem;
                 line-height: 1.2rem;
             }
             &__localisation{
                 color: rgb(73, 73, 73);
                 line-height: 1.2rem;
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
         }
     } 

@@ -11,15 +11,15 @@
     background-color: $color-tertiary;
         &-logo{
             align-self: center;
-            width: 350px; 
+            width: 30rem; 
             z-index: 1;
             position: absolute;
         }
         &-div{
             display: flex;
             justify-content: center;
-            width: 470px;
-            height: 470px;
+            width: 42rem;
+            height: 42rem;
             border-radius: 50%;
             align-self: center;
             position: relative;
@@ -47,10 +47,10 @@
                 &::after{
                     content: "";
                     position: absolute;
-                    top: 40px;
-                    bottom: 40px;
-                    left: 40px;
-                    right: 40px;
+                    top: 4rem;
+                    bottom: 4rem;
+                    left: 4rem;
+                    right: 4rem;
                     border-radius: 50%;
                     background-color: $color-tertiary;
                 
